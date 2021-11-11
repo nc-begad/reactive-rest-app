@@ -1,4 +1,4 @@
-package com.example.reactiverestapp.model;
+package com.example.reactiverestapp.entity;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
@@ -9,6 +9,16 @@ public class Department {
     @Id
     private Integer id;
     private String name;
+    @Column("user_id")
+    private Integer userId;
+    private String loc;
+
+    public Department(String name, int userId, String loc) {
+
+        this.name = name;
+        this.userId = userId;
+        this.loc = loc;
+    }
 
     public Integer getId() {
         return id;
@@ -41,8 +51,4 @@ public class Department {
     public void setLoc(String loc) {
         this.loc = loc;
     }
-
-    @Column("user_id")
-    private Integer userId;
-    private String loc;
 }

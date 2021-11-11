@@ -1,8 +1,8 @@
 package com.example.reactiverestapp.service;
 
 import com.example.reactiverestapp.dto.UserDepartmentDTO;
-import com.example.reactiverestapp.model.Department;
-import com.example.reactiverestapp.model.User;
+import com.example.reactiverestapp.entity.Department;
+import com.example.reactiverestapp.entity.User;
 import com.example.reactiverestapp.repository.DepartmentRepository;
 import com.example.reactiverestapp.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -69,8 +69,8 @@ public class UserService {
     }
 
     public Mono<UserDepartmentDTO> fetchUserAndDepartment(Integer userId){
-        Mono<User> user = findById(userId).subscribeOn(Schedulers.elastic());
-        Mono<Department> department = getDepartmentByUserId(userId).subscribeOn(Schedulers.elastic());
+        Mono<User> user = findById(userId).subscribeOn(Schedulers.boundedElastic());
+        Mono<Department> department = getDepartmentByUserId(userId).subscribeOn(Schedulers.boundedElastic());
         return Mono.zip(user, department, userDepartmentDTOBiFunction);
     }
 

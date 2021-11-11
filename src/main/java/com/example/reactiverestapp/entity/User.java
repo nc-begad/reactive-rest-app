@@ -1,7 +1,6 @@
-package com.example.reactiverestapp.model;
+package com.example.reactiverestapp.entity;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
 @Table("users")
@@ -12,6 +11,12 @@ public class User {
     private String name;
     private int age;
     private double salary;
+
+    public User(String name, int age, int salary) {
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+    }
 
     public Integer getId() {
         return id;

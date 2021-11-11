@@ -1,7 +1,7 @@
 package com.example.reactiverestapp.dto;
 
-import com.example.reactiverestapp.model.Department;
-import com.example.reactiverestapp.model.User;
+import com.example.reactiverestapp.entity.Department;
+import com.example.reactiverestapp.entity.User;
 
 public class UserDepartmentDTO {
     private Integer userId;

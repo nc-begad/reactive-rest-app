@@ -1,6 +1,6 @@
 package com.example.reactiverestapp.repository;
 
-import com.example.reactiverestapp.model.User;
+import com.example.reactiverestapp.entity.User;
 import org.springframework.data.r2dbc.repository.Query;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import reactor.core.publisher.Flux;

@@ -1,6 +1,6 @@
 package com.example.reactiverestapp.repository;
 
-import com.example.reactiverestapp.model.Department;
+import com.example.reactiverestapp.entity.Department;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import reactor.core.publisher.Mono;
 

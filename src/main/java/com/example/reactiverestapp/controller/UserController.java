@@ -1,7 +1,7 @@
 package com.example.reactiverestapp.controller;
 
 import com.example.reactiverestapp.dto.UserDepartmentDTO;
-import com.example.reactiverestapp.model.User;
+import com.example.reactiverestapp.entity.User;
 import com.example.reactiverestapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
